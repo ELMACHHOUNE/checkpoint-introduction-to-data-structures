@@ -1,0 +1,43 @@
+ALGORITHM Algo_DataStr
+VAR
+    T1,T2: ARRAY_OF INTEGER;
+
+    sumT1 := 0;
+    CaT1, CaT2 : INTEGER; //le nombre des cases sur le table
+    i,j : INTEGER;
+
+BEGIN
+    Write("Donnez le nombre des cases pour le table 1 :");
+        Read(CaT1);
+    Write("Donnez le nombre des cases pour le table 2 :");
+        Read(CaT2);
+    
+    
+    Write("donneez les valeux de tableau T1");
+        FOR i FROM 0 TO CaT1-1 STEP 1 DO 
+            Read (T1[i]);
+        END FOR
+
+    Write("donneez les valeux de tableau T2");
+        FOR j FROM 0 TO CaT2-1 STEP 1 DO 
+            Read (T2[j]);
+        END FOR
+
+sam_number :=  0
+    FOR i FROM 0 TO CaT1 DO
+        FOR J FROM 0 TO CaT2 DO
+            IF (T1[i] = T2[j]) DO
+                sam_number := 1;
+                break;
+            END IF
+
+        END FOR
+
+        IF (sam_number = 0)
+            sumT1 := sumT1 + T1[i]
+        END IF
+        sam_number := 1;
+    END FOR
+
+    
+END
